@@ -1,7 +1,6 @@
 # Algoritmos de Búsqueda
 
-> **Repositorio:** `algoritmos_busqueda` · **Rama:** `dev_<usuarioCorreo>` · **Entrega:** 22 de octubre de 2026
-> **Autor:** _<nombre completo>_
+> **Autor:** _<Vanessa Bernal>_
 
 Para cada algoritmo se presenta su **definición**, su **eficiencia** (tiempo y espacio) y sus **casos de uso**, junto con una traza sobre un mismo arreglo de ejemplo y una implementación en Java 17.
 
