@@ -17,7 +17,8 @@ Para cada algoritmo se presenta su **definición**, su **eficiencia** (tiempo y 
 8. [Tabla comparativa](#8-tabla-comparativa)
 9. [¿Cuál elegir?](#9-cuál-elegir)
 10. [Preguntas clave para la sustentación](#10-preguntas-clave-para-la-sustentación)
-11. [Referencias](#11-referencias)
+11. [Ejercicios](#11-ejercicios)
+12. [Referencias](#12-referencias)
 
 ---
 
@@ -655,7 +656,33 @@ Porque `lo + hi` puede superar el máximo de `int` (2³¹ − 1) en arreglos gra
 
 ---
 
-## 11. Referencias
+## 11. Ejercicios
+
+Soluciones en [`src/`](src/), una clase por ejercicio. La justificación de cada estructura y su complejidad está en el comentario de la clase, y [`Pruebas.java`](src/Pruebas.java) cubre los casos límite (vacío, primero, último, ausente, fuera de rango y repetidos).
+
+| Ejercicio | Clase | Estructura | Tiempo |
+|---|---|---|---|
+| Primer ticket crítico sin reordenar la cola | `Ejercicio1Lineal` | Lista en orden de llegada | `O(n)` |
+| `lowerBound` para insertar precios con duplicados | `Ejercicio2Binaria` | Arreglo ordenado | `O(log n)` buscar, `O(n)` insertar |
+| Código en un índice por bloques, con comparaciones | `Ejercicio3Saltos` | Arreglo ordenado en bloques de `√n` | `O(√n)` |
+| Lectura en IDs uniformes con repetidos | `Ejercicio4Interpolacion` | Arreglo ordenado uniforme | `O(log log n)` promedio, `O(n)` peor |
+| Evento en una lista que crece durante la carga | `Ejercicio5Exponencial` | Lista ordenada que crece al final | `O(log i)` |
+
+Compilar y ejecutar las pruebas (Java 17):
+
+```bash
+javac -d out src/*.java && java -cp out Pruebas
+```
+
+Imprimir el tiempo promedio de cada búsqueda en sus casos límite (`n = 1.000.000`), con [`Tiempos.java`](src/Tiempos.java):
+
+```bash
+java -cp out Tiempos
+```
+
+---
+
+## 12. Referencias
 
 1. Cormen, T., Leiserson, C., Rivest, R. y Stein, C. (2022). *Introduction to Algorithms* (4.ª ed.). MIT Press. Caps. 2, 11, 12 y 13.
 2. Knuth, D. (1998). *The Art of Computer Programming, Vol. 3: Sorting and Searching* (2.ª ed.). Addison-Wesley.
